@@ -1,0 +1,63 @@
+% Packages
+\RequirePackage[T1]{fontenc} % One should always have this
+\RequirePackage{amsmath, amssymb} % Standard ams tools
+\RequirePackage{color, hyperref} % For links
+\RequirePackage{ragged2e, fullpage} % Page formatting
+\RequirePackage{calc} % Various useful packages
+\RequirePackage[shortlabels]{enumitem}
+\RequirePackage[shortcuts]{extdash}
+
+% Shortcuts for Character Creation
+\newcommand{\tab}{\hspace*{2em}} % Tab
+\newcommand{\smallbullet}{\,\begin{picture}(-1,1)(-1,-3)\circle*{2}\end{picture}\ } % Small bullet
+\newcommand{\largebullet}{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ } % Large bullet
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\} % Line underneath text
+
+% Shortcuts for Creating Sections
+\newcommand{\contact}[2]{\begin{center}{\LARGE \scshape {#1}}\\{\large #2}\end{center}} % Header to the document
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder} % Header to a section
+\newenvironment{listsection}{
+    \begin{list}{$\lbt$}{
+        \topsep 0pt
+        \itemsep 0pt
+        \addtolength{\leftmargin}{-0.1in}
+    }}{\vspace*{4pt}\end{list}
+} % List section
+
+% Shortcuts for Creating Experiences and Projects
+\newcommand{\timedexperience}[3]{\textbf{#1}\hfill{\textit{#2}}\\#3\\\vspace*{7pt}} % Timed Experience
+\newcommand{\timedexperiencestrong}[3]{\textbf{#1}\hfill{\textit{#2}}\\ \textbf{\emph{#3}}\\\vspace*{7pt}} % Timed Experience with Emphasis
+\newcommand{\project}[3]{{ \textbf{#1} (\emph{#2})\\ {#3}\\  \vspace*{7pt}}} % Project
+\newcommand{\projectnoguide}[2]{{ \textbf{#1} (\emph{#2})\\ \vspace*{7pt}}} % Project With No Elaboration
+
+% Shortcuts for a Publications Section
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=0.05in,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+% Hyperlink Colors
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+% Page Formatting
+\pagestyle{empty}
+\raggedright
