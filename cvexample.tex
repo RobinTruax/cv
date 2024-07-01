@@ -1,53 +1,64 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
 \usepackage{cvformatting}
+\usepackage[margin=1in]{geometry}
 
 \begin{document}
 \pagenumbering{gobble}
-\vspace*{-35pt}
+\vspace*{-40pt}
 
-\contact{Example Person}{\href{mailto:person@example.edu}{\texttt{person@example.edu}} $\smallbullet$ \href{https://person.example/}{\texttt{person.example}}}
+\contact{Person Person}{\href{mailto:person@place.edu}{\texttt{person@place.edu}} $\smallbullet$ \href{https://person.com/}{\texttt{person.com}}}
 
 \header{Research Interests}
 \vspace{2mm}
 Example research interests.
-\vspace{5mm}
+\vspace{4mm}
 
 \header{Education}
 \vspace{2mm}
-\timedexperience{Example University}{2022 - 2022}{Example description.}
+\education{Example University}{2024 - 2026}{
+\degreefuture{Future Degree}{}
+}
+\education{Example University}{2020 - 2024}{
+\degree{Past Degree}{}{\textit{Topics.}}
+\degree{Past Degree}{}{\textit{Topics.}}
+}
+\vspace{4mm}
+
+\header{Publications}
+\begin{bibenum}
+\item Author. Title. \emph{Journal}. \url{https://arxiv.org/} 
+\item Author. Title. \emph{Journal}. \url{https://arxiv.org/} 
+\end{bibenum}
+\vspace{10mm}
+
+\header{Awards and Grants}
+\vspace{2mm}
+\timedexperience{Award}{2024}{Value, competitiveness, and explanation.}
+\vspace{4mm}
+
+\header{Selected Research Experience}
+\vspace{2mm}
+\timedexperience{Experience}{Place, 2023}{Description.}
+\vspace{4mm}
+
+\header{Selected Presentations and Talks}
+\vspace{2mm}
+\timedexperience{Title}{Month 2023}{Place}
 \vspace{5mm}
 
-\header{Research Experience}
+\header{Selected Work Experience}
 \vspace{2mm}
-\timedexperience{Example Research Experience}{2022}{Example description.}
-\timedexperiencestrong{Example Research Experience (Emphasis)}{2022}{Example description.}
-\vspace{5mm}
-
-\header{Presentations and Talks}
-\vspace{2mm}
-\timedexperience{Example Talk}{2022}{Example description.}
-\vspace{5mm}
-
-\header{Teaching and Work Experience}
-\vspace{2mm}
-\timedexperience{Example Job}{2022}{Example description.}
-\vspace{5mm}
+\timedexperience{Job}{2022 - 2024}{Description.}
+\vspace{4mm}
 
 \header{Workshops and Conferences}
 \vspace{2mm}
-\timedexperience{Example Workshop}{2022}{Example description.}
-\vspace{5mm}
+\timedexperience{Workshop}{2023}{Place}
+\vspace{4mm}
 
 \header{Outreach and Service}
 \vspace{2mm}
-\project{Example Outreach Experience}{Subtitle}{Example description.}
-\projectnoguide{Example Outreach Experience (No Elaboration)}{Subtitle}
-\vspace{5mm}
-
-\header{Publications and Papers}
-\begin{bibenum}
-\item Author. Title. \emph{Journal}. \url{https://arxiv.org/}
-\end{bibenum}
+Description.
+\vspace{4mm}
 
 \end{document}
