@@ -5,30 +5,26 @@
 \RequirePackage{ragged2e, fullpage} % Page formatting
 \RequirePackage{calc} % Various useful packages
 \RequirePackage[shortlabels]{enumitem}
-\RequirePackage[shortcuts]{extdash}
 
 % Shortcuts for Character Creation
-\newcommand{\tab}{\hspace*{2em}} % Tab
 \newcommand{\smallbullet}{\,\begin{picture}(-1,1)(-1,-3)\circle*{2}\end{picture}\ } % Small bullet
-\newcommand{\largebullet}{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ } % Large bullet
-\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\} % Line underneath text
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hrulefill \\} 
+\newcommand{\forceindent}{\leavevmode{\parindent=1em\indent}}
+% Line underneath text
 
 % Shortcuts for Creating Sections
-\newcommand{\contact}[2]{\begin{center}{\LARGE \scshape {#1}}\\{\large #2}\end{center}} % Header to the document
-\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder} % Header to a section
-\newenvironment{listsection}{
-    \begin{list}{$\lbt$}{
-        \topsep 0pt
-        \itemsep 0pt
-        \addtolength{\leftmargin}{-0.1in}
-    }}{\vspace*{4pt}\end{list}
-} % List section
+\newcommand{\contact}[2]{\begin{center}{\Large \scshape {#1}}\\\vspace*{6pt}{\large #2}\end{center}} % Header to the document
+\newcommand{\header}[1]{{\hspace*{0pt}\vspace*{6pt} \textsc{\large #1}} \vspace*{-6pt} \lineunder \vspace{2pt}} % Header to a section
 
 % Shortcuts for Creating Experiences and Projects
-\newcommand{\timedexperience}[3]{\textbf{#1}\hfill{\textit{#2}}\\#3\\\vspace*{7pt}} % Timed Experience
-\newcommand{\timedexperiencestrong}[3]{\textbf{#1}\hfill{\textit{#2}}\\ \textbf{\emph{#3}}\\\vspace*{7pt}} % Timed Experience with Emphasis
-\newcommand{\project}[3]{{ \textbf{#1} (\emph{#2})\\ {#3}\\  \vspace*{7pt}}} % Project
-\newcommand{\projectnoguide}[2]{{ \textbf{#1} (\emph{#2})\\ \vspace*{7pt}}} % Project With No Elaboration
+\newcommand{\timedexperience}[3]{\textbf{#1}\hfill{#2}\\#3\\\vspace*{6pt}} % Timed Experience
+\newcommand{\education}[3]{\textbf{#1}\hfill{#2}\\\vspace*{4pt}#3\vspace*{6pt}} % Education
+\newcommand{\degree}[3]{\hspace{10mm}\text{#1}\hfill{#2}\\\setlength{\leftskip}{10mm}{#3}\\\vspace*{6pt}\setlength{\leftskip}{0mm}} % Degree
+\newcommand{\degreefuture}[2]{\hspace{10mm}\text{#1}\hfill{#2}\\\vspace*{6pt}} % Degree Future
+\newcommand{\timedexperiencenodesc}[2]{\textbf{#1}\hfill{\textit{#2}}\\\vspace*{6pt}} % Timed Experience
+\newcommand{\timedexperiencestrong}[3]{\textbf{#1}\hfill{\textit{#2}}\\ \textbf{\emph{#3}}\\\vspace*{6pt}} % Timed Experience with Emphasis
+\newcommand{\project}[3]{{ \textbf{#1} (\emph{#2})\\ {#3}\\  \vspace*{6pt}}} % Project
+\newcommand{\projectnoguide}[2]{{ \textbf{#1} (\emph{#2})\\ \vspace*{6pt}}} % Project With No Elaboration
 
 % Shortcuts for a Publications Section
 \makeatletter
